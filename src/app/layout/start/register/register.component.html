@@ -1,0 +1,160 @@
+<!-- <section class="header  header-shot 
+     ">
+  <div class="container-fluid imgyu"
+    style="background-image: url(../../../assets/images/background/15.png); height: 246px; min-height: 246px; background-repeat: no-repeat; background-size: cover;">
+
+  </div>
+
+
+  <section class="main-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="clearfix"></div>
+          <br>
+          <br>
+          <div class="box-text">
+            <div class="title"><span>Info</span></div>
+            <p>
+              With the advent of cryptocurrency many entrepreneurs have noticed that this is not only a convenient
+              payment method but also great source of income in the area of online investment. Today, you can find
+              dozens of tempting offers, but you should carefully consider each of them. First of all, pay attention to
+              the legality of the company work as well as the previous experience and their history.
+            </p>
+
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="box-signup">
+
+            <ul class="error-list">
+              <form class="form-on-dark" (ngSubmit)='Reg(we)' #we='ngForm'>
+                <div class="col-md-6">
+                  <div class="field">
+                    <label>
+                      <span>Your Full Name</span>
+                      <input type="text" class="inpts" required ngModel name="fullname" placeholder="FULL NAME*"
+                        (change)="analyzeFullname($event.target.value)" id="id_full">
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label>
+                      <span>Define Password</span>
+                      <input type="password" class="inpts" required ngModel name="password"
+                        (change)="analyze($event.target.value)" id="id_pass" placeholder="PASSWORD*">
+                      <a>
+                        <i class="fa fa-eye toggle-password" style="position: absolute;
+                        right: 40px;
+                        font-size: 24px;
+                        color: black;"></i>
+                      </a>
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label>
+                      <span>Your E-mail Address</span>
+                      <input type="email" class="inpts" required email ngModel name="email" id="id_email"
+                        (change)=" checkMail($event.target.value)" placeholder="EMAIL*">
+                    </label>
+                  </div>
+
+                  <div class="field">
+                    <label>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="field">
+                    <label>
+                      <span>Your Username</span>
+                      <input type="text" class="inpts" required ngModel name="username"
+                        (change)="analyzeUsername($event.target.value)" placeholder="USERNAME*" id="id_user">
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label>
+                      <span>Retype Password</span>
+                      <input type="password" class="inpts" id="c_pass" required ngModel name="cpass"
+                        placeholder="CONFIRM PASSWORD*">
+                      <a>
+                        <i class="fa fa-eye toggle-pasword" style="position: absolute;
+                          right: 40px;
+                          font-size: 24px;
+                          color: black;" (click)="show()"></i>
+                      </a>
+                    </label>
+                  </div>
+                  <div class="field">
+                    <label>
+                      <span>Your Wallet Address:</span>
+                      <input type="text" class="inpts" ngModel name="bitcoin" placeholder="Wallet Address">
+                    </label>
+                  </div>
+                </div>
+                <div class="none">
+                </div>
+                <div class="col-md-12" style="padding:15px 30px 0 30px;">
+                  <div class="block-checkbox">
+                    <label class="active" id="met" (click)="tog()">
+                      <input type="checkbox" name="agree" checked="checked" value="1"> I agree with <a
+                        routerLink="/Faq">Terms and conditions</a>
+                    </label>
+                    <input type="submit" [disabled]="!we.valid" name="commit" value="Register" class="sbmt">
+
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="none">
+                </div>
+
+
+
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</section> -->
+
+
+<div class="unix-login" style="background: #062863; height: 100vh;">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="login-content card">
+          <div class="login-form">
+            <h4>Register</h4>
+            <form>
+              <div class="form-group">
+                <label>User Name</label>
+                <input type="email" class="form-control" placeholder="User Name">
+              </div>
+              <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Agree the terms and policy
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+              <div class="register-link m-t-15 text-center">
+                <p>Already have account ? <a href="#"> Sign in</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

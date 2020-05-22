@@ -1,0 +1,27 @@
+<div class="container-fluid imgyu"
+  style="background-image: url(../../../assets/images/background/15.png); height: 246px; min-height: 246px; background-repeat: no-repeat; background-size: cover;">
+
+</div>
+
+
+<div class="container-fluid">
+  <div class="container">
+    <div class="message" *ngIf="code == 1">
+      <p class="pad"><i class="fa fa-thumbs-o-up fa-5x"></i></p>
+      <h3 class="pad">Thanks for signing up</h3>
+
+      <p class="pad">Your email has been confirmed succesfully</p>
+
+      <p class="pad"><button class="btn btn-success">Go home</button></p>
+    </div>
+
+    <div class="message" *ngIf="code == 2">
+      <p class="pad"><i class="fa fa-thumbs-o-down fa-5x"></i></p>
+      <h3 class="pad">Error</h3>
+
+      <p class="pad">Email does not exist</p>
+
+      <p class="pad"><button class="btn btn-danger" routerLink="/">Go home</button></p>
+    </div>
+  </div>
+</div>

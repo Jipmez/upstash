@@ -1,0 +1,129 @@
+<!-- <section class="header  header-shot 
+     ">
+  <div class="container-fluid imgyu"
+    style="background-image: url(../../../assets/images/background/15.png); height: 246px; min-height: 246px; background-repeat: no-repeat; background-size: cover;">
+
+  </div>
+
+
+  <section class="main-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="clearfix"></div>
+          <br>
+          <br>
+          <div class="box-text">
+            <div class="title"><span>Info</span></div>
+            <p>
+              With the advent of cryptocurrency many entrepreneurs have noticed that this is not only a convenient
+              payment method but also great source of income in the area of online investment. Today, you can find
+              dozens of tempting offers, but you should carefully consider each of them. First of all, pay attention to
+              the legality of the company work as well as the previous experience and their history.
+            </p>
+
+          </div>
+          <div class="box-text">
+            <div class="title"><span>Loan Services</span></div>
+            <h4>Daily</h4>
+            <p style="font-weight: bolder;">$500 Maximum</p>
+            <h4>Weekly</h4>
+            <p style="font-weight: bolder;">$500 - $5000</p>
+            <h4>Monthly</h4>
+            <p style="font-weight: bolder;">$10000 - UNLIMITED</p>
+            <br>
+            <p>To access loans, please contact our customer care representative</p>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="box-signup">
+
+            <ul class="error-list">
+
+              <form class="form-on-dark" (ngSubmit)='logIn(so)' #so='ngForm'>
+                <div class="col-md-12">
+                  <div class="field">
+                    <label>
+                      <span>Your Email</span>
+                      <input type="email" class="inpts" size="30" required ngModel name="email">
+                    </label>
+                  </div>
+                  <div class="field ">
+                    <label>
+                      <span>Your Password</span>
+                      <input type="password" class="inpts" id="me" size="30" required ngModel name="password">
+                      <a>
+                        <i class="fa fa-eye toggle-password" style="position: absolute;
+                        right: 40px;
+                        font-size: 24px;
+                        bottom: 10px;
+                        color: black;"></i>
+                      </a>
+
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-12" style="padding:15px 30px 0 30px;">
+                  <div class="block-checkbox">
+                    <input type="submit" value="Login" [disabled]='!so.valid' class="sbmt form-control btn btn-primary">
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="none">
+                </div>
+
+
+
+              </form>
+            </ul>
+            <br>
+            <a routerLink="/forgot_pass" class="recovery-link">Forgot password?</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</section> -->
+
+
+<div class="unix-login" style="background: #062863;">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="login-content card">
+          <div class="login-form">
+            <h4>Log in to Upstash</h4>
+            <form (ngSubmit)='logIn(so)' #so='ngForm'>
+              <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" placeholder="Email" required ngModel name="email">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Password" required ngModel name="password">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember Me
+                </label>
+                <label class="pull-right">
+                  <a href="#">Forgotten Password?</a>
+                </label>
+              </div>
+              <button type="submit" [disabled]='!so.valid' class="btn btn-primary btn-flat m-b-30 m-t-30">Sign
+                in</button>
+              <div class="register-link m-t-15 text-center">
+                <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

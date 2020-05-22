@@ -1,0 +1,105 @@
+<!-- <ng-progress [color]="'blue'" style="z-index:1050px;"></ng-progress>
+ -->
+<div class="nk-content nk-content-lg nk-content-fluid">
+  <div class="container-xl ">
+    <div class="nk-content-inner">
+      <div class="nk-content-body">
+        <div class="nk-block-head">
+          <div class="nk-block-head-content">
+            <div class="nk-block-between-md g-4">
+              <div class="nk-block-head-content">
+                <h2 class="nk-block-title fw-normal">Withdraw</h2>
+                <div class="nk-block-des">
+                  <p>Your will recieve withdrawal (Payment Within 1 working day)</p>
+                </div>
+              </div>
+              <div class="nk-block-head-content">
+                <ul class="nk-block-tools gx-3">
+                  <li><a routerLink="../deposit" class="btn btn-white btn-light"><span>Invest More</span>
+                      <em class="icon fa fa-arrow-right d-none d-sm-inline-block"></em></a>
+                  </li>
+                  <!--  <li class="opt-menu-md dropdown"><a href="#" class="btn btn-white btn-light btn-icon"
+                      data-toggle="dropdown"><em class="icon fa fa-cog"></em></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <ul class="link-list-opt no-bdr">
+                        <li><a href="#"><em class="icon ni ni-coin-alt"></em><span>Curreny
+                              Settings</span></a></li>
+                        <li><a href="#"><em class="icon ni ni-notify"></em><span>Push
+                              Notification</span></a></li>
+                      </ul>
+                    </div>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nk-block">
+          <div class="card card-bordered">
+            <div class="card-inner-group">
+              <div class="card-inner">
+                <div class="row gy-gs">
+                  <div class="col-lg-5">
+                    <div class="nk-iv-wg3">
+                      <div class="nk-iv-wg3-title">Total Balance</div>
+                      <div class="nk-iv-wg3-group  flex-lg-nowrap gx-4">
+                        <div class="nk-iv-wg3-sub">
+                          <div class="nk-iv-wg3-amount">
+                            <div class="number">{{acc}} <small class="currency currency-usd">USD</small>
+                            </div>
+                          </div>
+                          <div class="nk-iv-wg3-subtitle">Available Balance</div>
+                        </div>
+                        <div class="nk-iv-wg3-sub"><span class="nk-iv-wg3-plus text-soft"><em
+                              class="icon fa fa-minus"></em></span>
+                          <div class="nk-iv-wg3-amount">
+                            <div class="number-sm">{{pwith}}</div>
+                          </div>
+                          <div class="nk-iv-wg3-subtitle">Pending Withdrawal <em class="icon ni ni-info-fill"
+                              data-toggle="tooltip" data-placement="right" title="You can't use"></em></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="nk-iv-wg3">
+                      <div class="number">Withdrawal address</div>
+                      <div class="nk-iv-wg3-group  flex-lg-nowrap gx-4">
+                        <div class="nk-iv-wg3-sub">
+                          <div class="nk-iv-wg3-amount">
+                            <div class="nk-iv-wg3-title">{{bitad}} <small class="currency currency-usd"></small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nk-block nk-block-lg">
+          <div class="nk-iv-scheme-list">
+            <div class="nk-iv-scheme-item">
+              <div class="continer-fluid" *ngIf='acc >= 5'>
+                <form (ngSubmit)='withdraw(so)' #so='ngForm'>
+                  <input type="text" class="form-control form-group" required ngModel name="withdraw"
+                    placeholder="AMOUNT TO WITHDRAW">
+                  <input type="submit" class="btn btn-primary form-control" value="WITHDRAW FUNDS"
+                    [disabled]='!so.valid' style="display: block">
+                </form>
+              </div>
+              <div class="container-fluid no-fund" *ngIf='acc < 5'>
+                <div class="no-fund alert alert-danger">
+                  <span style="color:red">x</span>
+                  You don't have enough funds to withdraw
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

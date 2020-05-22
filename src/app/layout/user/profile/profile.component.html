@@ -1,0 +1,155 @@
+<div class="nk-content nk-content-lg nk-content-fluid">
+  <div class="container-xl ">
+    <div class="nk-content-inner">
+      <div class="nk-content-body">
+        <div class="nk-block-head">
+          <div class="nk-block-head-content">
+            <div class="nk-block-head-sub"><span>My Profile</span></div>
+            <h2 class="nk-block-title fw-normal">Account Info</h2>
+            <div class="nk-block-des">
+              <p>You have full control to manage your own account setting. <span class="text-primary"><em
+                    class="icon fa fa-info"></em></span></p>
+            </div>
+          </div>
+        </div>
+        <!--   <ul class="nk-nav nav nav-tabs">
+          <li class="nav-item"><a class="nav-link" href="profile.html">Personal</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile-setting.html">Security<span class="d-none s-sm-inline">
+                Setting</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="profile-notify.html">Notifications</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="profile-connected.html">Connect
+              Social</a></li>
+        </ul> -->
+        <div class="nk-block">
+          <div class="nk-block-head">
+            <div class="nk-block-head-content">
+              <h5 class="nk-block-title">Personal Information</h5>
+              <div class="nk-block-des">
+                <p>Basic info, like your name, affiliate link, bitcoin address, that you use on Cryptofinancer Platform.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card card-bordered">
+            <div class="nk-data data-list">
+              <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                <div class="data-col"><span class="data-label">Full Name</span><span
+                    class="data-value">{{fullname}}</span></div>
+                <div class="data-col data-col-end"><span class="data-more"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+              <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                <div class="data-col"><span class="data-label">Username</span><span class="data-value">{{username}}
+                  </span></div>
+                <div class="data-col data-col-end"><span class="data-more"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+              <div class="data-item">
+                <div class="data-col"><span class="data-label">Email</span><span class="data-value">{{email}}</span>
+                </div>
+                <div class="data-col data-col-end"><span class="data-more disable"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+              <div class="data-item">
+                <div class="data-col"><span class="data-label">Log time</span><span class="data-value">{{log}}</span>
+                </div>
+                <div class="data-col data-col-end"><span class="data-more disable"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+              <div class="data-item">
+                <div class="data-col"><span class="data-label">Signup date</span><span
+                    class="data-value">{{sign}}</span></div>
+                <div class="data-col data-col-end"><span class="data-more disable"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+              <div class="data-item">
+                <div class="data-col"><span class="data-label">Affiliate Link</span><span
+                    class="data-value">{{location}}/#/signup?ref={{username}}</span></div>
+                <div class="data-col data-col-end"><span class="data-more disable"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+              <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                <div class="data-col"><span class="data-label">Bitcoin Address</span><span
+                    class="data-value"><b>{{bitad}}</b></span>
+                </div>
+                <div class="data-col data-col-end"><span class="data-more"><em
+                      class="icon fa fa-caret-right"></em></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form (ngSubmit)='update(so)' #so='ngForm'>
+  <div class="modal fade" tabindex="-1" role="dialog" id="profile-edit">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content"><a href="#" class="close" data-dismiss="modal"><em
+            class="icon ni ni-cross-sm"></em></a>
+        <div class="modal-body modal-body-lg">
+          <h5 class="title">Update Profile</h5>
+          <ul class="nk-nav nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#personal">Personal</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="personal">
+              <div class="row gy-4">
+                <div class="col-md-12">
+                  <div class="form-group"><label class="form-label" for="full-name">Change bitaddress
+                    </label><input class="form-control form-control-lg" [value]="bitad" ngModel name="bitad"
+                      placeholder="update bitcoin address" type="text"></div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group"><label class="form-label" for="birth-day">New Password</label><input
+                      class="form-control form-control-lg" name="newpass" ngModel placeholder="New Password"
+                      type="password"></div>
+                </div>
+                <div class="col-12">
+                  <ul class="align-center flex-wrap flex-sm-nowrap gx-4 gy-2">
+                    <li><a href="#" class="btn btn-lg btn-primary" data-dismiss="modal" data-toggle="modal"
+                        data-target="#pass-edit">Update
+                        Profile</a></li>
+                    <li><a href="#" data-dismiss="modal" class="link link-light">Cancel</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" tabindex="-1" id="pass-edit">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <div class="modal-body modal-body-md text-center">
+          <div class="nk-modal">
+            <h4 class="nk-modal-title">Confirm Your Update</h4>
+            <div class="nk-modal-text">
+              <p>To confirm your profile update.Please enter your Current Pass code in order
+                complete the update of your profile or cancel.</p>
+            </div>
+            <div class="nk-modal-form">
+              <div class="form-group">
+                <input class="form-control form-control-password-big text-center" name="cpass" ngModel type="password">
+              </div>
+            </div>
+            <div class="nk-modal-action"><button [disabled]='!so.valid'
+                class="btn btn-lg btn-mw btn-primary">Submit</button>
+              <br>
+              <a href="#" class="link link-soft" data-dismiss="modal">Cancel and
+                return</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

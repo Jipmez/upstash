@@ -1,0 +1,51 @@
+<div class="content">
+  <div class="col-md-12 col-lg-12 col-12">
+
+    <div class="box table-responsive shadow">
+      <div class="box-header">
+        <div class="row">
+          <h3>All Deposit</h3>
+          <h6 style="display: inline-block;">Click each user to view</h6>
+        </div>
+      </div>
+      <table #dataTable class="display table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Plan</th>
+            <th>Pay_mode</th>
+            <th>Amount</th>
+            <th>Profit</th>
+            <th>Deposit ID</th>
+            <th>Confirm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let deposits of deposit" (click)="select(deposits)">
+            <td>{{deposits.email}}</td>
+            <td>{{deposits.username}}</td>
+            <td>{{deposits.plan}}</td>
+            <td>{{deposits.pay_mode}}</td>
+            <td>{{deposits.amount}}</td>
+            <td>{{deposits.expected_roi}}</td>
+            <td>{{deposits.deposite_id}}</td>
+            <td><button class="btn btn-secondary" (click)="confirm(deposits.deposite_id)">confirm</button></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Plan</th>
+            <th>Pay_mode</th>
+            <th>Amount</th>
+            <th>Profit</th>
+            <th>Deposit ID</th>
+            <th>Confirm</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div>

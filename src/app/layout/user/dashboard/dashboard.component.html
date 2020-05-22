@@ -1,0 +1,174 @@
+<div class=" " style="padding:0">
+  <div class="container-fluid dashboard-main" style="padding:0 !important">
+
+
+
+
+    <div class="wrapper">
+      <div class="sidenav">
+
+        <div class="media sidebar-padding">
+          <div class="media-left media-middle">
+            <img src="https://img.icons8.com/bubbles/2x/user.png" alt="person" style="width: 60px" class="img-circle">
+          </div>
+          <div class="media-body media-middle">
+            <a class="h4 margin-none">{{user}}</a>
+            <ul class="list-unstyled list-inline margin-none">
+              <li><a routerLink='profile'><i class="fa fa-user"></i></a></li>
+              <li (click)="logOut()"><a><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div class="sidenav-cover">
+          <div class="sidenav-content">
+            <ul class="nav">
+              <li class="nav-item "
+                [class.active]="currentUrl == '/dashboard'  || currentUrl == '/dashboard/dashcontent'" id="hide"><a
+                  class="nav-link" routerLink='/dashboard'><i class="fa fa-google-wallet"></i>Your
+                  Account</a>
+              </li>
+
+              <li class="nav-item" [class.active]="currentUrl == '/dashboard/deposit'" id="hide"><a class="nav-link"
+                  routerLink='deposit'><i class="fa fa-download"></i>Make Deposit</a></li>
+
+              <li class="nav-item" [class.active]="currentUrl == '/dashboard/withdrawal'" id="hide"><a class="nav-link"
+                  routerLink='withdrawal'><i class="fa fa-send"></i>Withdraw Funds</a></li>
+
+              <!--  <li class="nav-item" [class.active]="currentUrl == '/dashboard/withH'" id="hide"><a class="nav-link"
+                  routerLink='withH'><i class="fa fa-history"></i>Operations History</a></li> -->
+
+
+              <li class="nav-item" [class.active]="currentUrl == '/dashboard/profile'" id="hide"><a class="nav-link"
+                  routerLink='profile'><i class="fa fa-user"></i>Account Setting</a></li>
+
+              <li class="nav-item" [class.active]="currentUrl == '/dashboard/affiliate'" id="hide"><a class="nav-link"
+                  routerLink='affiliate'><i class="fa fa-registered"></i>Affiliate Program</a></li>
+
+              <li class="nav-item" (click)="logOut()"><a class="nav-link"><i class="fa fa-sign-out"></i>Leave
+                  Account</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid main-content"
+        style="background-image: url('../../../assets/images/background/1.png');">
+        <!--  <nav class="navbar navbar-expand-lg our-nav navbar-light fixed-top  gray">
+          <i id="tog" (click)="toggleme()" class="fa fa-bars" style="float:left;font-size:30px; color:#12326b;"></i>
+  
+          <a class="nav-link  text-muted  "><img _ngcontent-hfp-c4="" alt="#"
+              src="../../../../assets/images/process-icons/1.png" style="height: 20px;">
+            Wallet</a>
+        </nav> -->
+
+
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top  our-nav  fixed-top  gray">
+          <i id="tog" (click)="toggleme()" class="fa fa-bars" style="float:left;font-size:30px; color:#12326b;"></i>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-lg-inline text-gray-600 small">{{user}}</span>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" routerLink='profile'>
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" (click)="logOut()">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+
+  <div _ngcontent-ilo-c3="" class="luno-mobile-nav  isMobile">
+    <!---->
+    <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+      <!---->
+      <!----><a _ngcontent-ilo-c3="" href="/wallet/" class="ng-star-inserted">
+        <!---->
+        <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple="">
+          <div _ngcontent-ilo-c3="" class="svg"
+            style="background: url(&quot;https://d32exi8v9av3ux.cloudfront.net/wallet-app/2020/04/29/b5ee2810ba/wallet-app/assets/img/ic_home.svg&quot;);">
+          </div>
+          <p _ngcontent-ilo-c3="">Home</p>
+        </div>
+        <!---->
+        <!---->
+      </a></div>
+    <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+      <!---->
+      <!----><a _ngcontent-ilo-c3="" routerLink="deposit" class="ng-star-inserted">
+        <!---->
+        <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple=""
+          [class.active]="currentUrl == '/dashboard/deposit'">
+          <div _ngcontent-ilo-c3="" class="svg">
+            <i class="fa fa-download fa-2x"></i>
+          </div>
+          <p _ngcontent-ilo-c3="">Deposit</p>
+        </div>
+        <!---->
+        <!---->
+      </a></div>
+    <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+      <!---->
+      <!----><a _ngcontent-ilo-c3="" href="/wallet/accounts" class="ng-star-inserted ">
+        <!---->
+        <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted active"
+          [class.active]="currentUrl == '/dashboard'  || currentUrl == '/dashboard/dashcontent'">
+          <div _ngcontent-ilo-c3="" class="svg"
+            style="background: url(&quot;https://d32exi8v9av3ux.cloudfront.net/wallet-app/2020/04/29/b5ee2810ba/wallet-app/assets/img/ic_wallet.svg&quot;); color: brown;">
+          </div>
+          <p _ngcontent-ilo-c3="">Wallets</p>
+        </div>
+        <!---->
+        <!---->
+      </a></div>
+    <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+      <!---->
+      <!----><a _ngcontent-ilo-c3="" href="/wallet/rewards" class="ng-star-inserted">
+        <!---->
+        <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple="">
+          <div _ngcontent-ilo-c3="" class="svg"
+            style="background: url(&quot;https://d32exi8v9av3ux.cloudfront.net/wallet-app/2020/04/29/b5ee2810ba/wallet-app/assets/img/ic_rewards.svg&quot;);">
+          </div>
+          <p _ngcontent-ilo-c3="">Withdraw</p>
+        </div>
+        <!---->
+        <!---->
+      </a></div>
+    <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+      <!---->
+      <!----><a _ngcontent-ilo-c3="" href="/wallet/profile" class="ng-star-inserted">
+        <!---->
+        <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple="">
+          <div _ngcontent-ilo-c3="" class="svg"
+            style="background: url(&quot;https://d32exi8v9av3ux.cloudfront.net/wallet-app/2020/04/29/b5ee2810ba/wallet-app/assets/img/ic_profile.svg&quot;);">
+          </div>
+          <p _ngcontent-ilo-c3="">Profile</p>
+        </div>
+        <!---->
+        <!---->
+      </a></div>
+  </div>
+</div>

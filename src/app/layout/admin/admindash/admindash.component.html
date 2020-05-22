@@ -1,0 +1,63 @@
+<div class="container-fluid dashboard-main" style="padding:0 !important">
+
+
+
+
+  <div class="wrapper">
+    <div class="sidenav">
+
+      <div class="media sidebar-padding">
+        <div class="media-left media-middle">
+          <img src="https://img.icons8.com/bubbles/2x/user.png" alt="person" style="width: 60px" class="img-circle">
+        </div>
+        <div class="media-body media-middle">
+          <a class="h4 margin-none">{{user}}</a>
+          <ul class="list-unstyled list-inline margin-none">
+            <li><a routerLink='profile'><i class="fa fa-user"></i></a></li>
+            <li (click)="AlogOut()"><a><i class="fa fa-sign-out"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="sidenav-cover">
+        <div class="sidenav-content">
+          <ul class="nav">
+            <li class="nav-item "
+              [class.active]="currentUrl == '/hkgjiinif684080ngi98084g06'  || currentUrl == '/hkgjiinif684080ngi98084g06/content'"
+              id="hide"><a class="nav-link" routerLink='content'><i class="fa fa-google-wallet"></i>Admin
+                Dashboard</a>
+            </li>
+
+            <li class="nav-item" [class.active]="currentUrl == '/hkgjiinif684080ngi98084g06/deposit'" id="hide"><a
+                class="nav-link" routerLink='deposit'><i class="fa fa-download"></i>Recent Deposit</a></li>
+
+            <li class="nav-item" [class.active]="currentUrl == '/hkgjiinif684080ngi98084g06/withdraw'" id="hide"><a
+                class="nav-link" routerLink='withdraw'><i class="fa fa-send"></i>Recent Withdrawal</a></li>
+
+            <li class="nav-item" [class.active]="currentUrl == '/hkgjiinif684080ngi98084g06/adcontent'" id="hide"><a
+                class="nav-link" routerLink='adcontent'><i class="fa fa-history"></i>Add contents</a></li>
+
+            <li class="nav-item" (click)="AlogOut()"><a class="nav-link"><i class="fa fa-sign-out"></i>Leave Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="container-fluid main-content" style="background-image: url('../../../assets/images/background/1.png');">
+      <nav class="navbar navbar-expand-lg our-nav navbar-light fixed-top  gray">
+        <i id="tog" (click)="toggleme()" class="fa fa-bars" style="float:left;font-size:30px; color:#12326b;"></i>
+
+        <a class="nav-link  text-muted  "><img _ngcontent-hfp-c4="" alt="#"
+            src="../../../../assets/images/process-icons/1.png" style="height: 20px;">
+          Admin</a>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

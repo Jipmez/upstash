@@ -1,0 +1,76 @@
+<!-- <div class="container-fluid">
+  <div class="withdrawal-history-table">
+      <div class="table-responsive">
+        <table class="table table-striped ">
+          <thead>
+            <th>email</th>
+            <th>username</th>
+            <th>amount</th>
+            <th>id</th>
+            <th>time</th>
+            <th>date</th>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let withdraws of withdraw | paginate: {itemsPerPage:3, currentPage: q}" (click)="select(withdraws)">
+              <td>{{withdraws.email}}</td>
+              <td>{{withdraws.username}}</td>
+              <td>${{withdraws.withdrawamount}}</td>
+              <td>{{withdraws.withdrawId}}</td>
+              <td>{{withdraws.withdrawtime}}</td>
+              <td>{{withdraws.date}}</td>
+              <button (click)="confirm(withdraws.withdrawId)">confirm</button>
+            </tr>
+            
+          </tbody>
+        </table>
+        <pagination-controls (pageChange)="q = $event "></pagination-controls>
+      </div>
+    </div>
+</div>
+ -->
+<div class="content">
+  <div class="col-md-12 col-lg-12 col-12">
+    <div class="box table-responsive shadow">
+      <div class="box-header">
+        <div class="row">
+          <h3>All Withdrawals</h3>
+          <h6 style="display: inline-block;">Click each user to view</h6>
+        </div>
+      </div>
+      <table #dataTable class="display table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">email</th>
+            <th scope="col">username</th>
+            <th scope="col">plan</th>
+            <th scope="col">amount</th>
+            <th scope="col">return</th>
+            <th scope="col">id</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let withdraws of withdraw" (click)="select(withdraws)">
+            <td>{{withdraws.email}}</td>
+            <td>{{withdraws.username}}</td>
+            <td>${{withdraws.withdrawamount}}</td>
+            <td>{{withdraws.withdrawId}}</td>
+            <td>{{withdraws.withdrawtime}}</td>
+            <td>{{withdraws.date}}</td>
+            <!--  <button class="btn btn-primary" (click)="confirm(withdraws.withdrawId)">confirm</button> -->
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="col">email</th>
+            <th scope="col">username</th>
+            <th scope="col">plan</th>
+            <th scope="col">amount</th>
+            <th scope="col">return</th>
+            <th scope="col">id</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div>
+</div>
